@@ -2,7 +2,7 @@ const fs = require('fs');
 let users = [
     {
         name : "saiesh",
-        age : 19,
+        age : 20,
         address : "Delhi"
     },
     {
@@ -11,7 +11,7 @@ let users = [
         address : "Mumbai"
     }
 ]
-fs.writeFile('users.txt',JSON.stringify(users),function(err) {
-    if (err) return console.error(err);
+fs.writeFile('../users.txt',JSON.stringify(users),function(err) {
+    if (err) return console.log(err);
     console.log('done');
 });
