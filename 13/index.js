@@ -29,6 +29,6 @@ function displayUser(user){
                 <button class="user-delete">Delete</button>
                 <button class="user-edit">Edit</button>
             </div>`
-            userContainer.appendChild(li);
+            userConatiner.appendChild(li);
 }
 getUserData('https://jsonplaceholder.typicode.com/users');
