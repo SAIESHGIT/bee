@@ -5,11 +5,37 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.post('/blog',(req,res)=>{
+const Blogs = require('./model/user');
+
+app.post('/blog',async (req,res)=>{
     let {title, body} = req.body;
-    console.log(title, body);
-    res.send("got it ")
+    let newBlog = new Blogs({
+        title: title,
+        body: body,
+        date: new Date()
+    });
+    await newBlog.save();
+    res.json({
+        success: true, 
+        data: newBlog,
+        message: "Blog created successfully"
+    });
 })
+app.get('/blog',async (req,res)=>{
+    let allBlogs = await Blogs.find();
+    res.json({
+        success: true,
+        data: allBlogs,
+    });
+});
+app.get('/blog/:id',async (req,res)=>{
+    let {id} = req.params;
+    let blog = await Blogs.findOne({_id: id});
+    res.json({
+        success: true,
+        data: blog,
+    });
+});
 
 
 
