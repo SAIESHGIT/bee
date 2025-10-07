@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "prisma": "^6.16.1"
+  },
+  "name": "bee(sems)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SAIESHGIT/bee.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SAIESHGIT/bee/issues"
+  },
+  "homepage": "https://github.com/SAIESHGIT/bee#readme",
+  "description": ""
+}
